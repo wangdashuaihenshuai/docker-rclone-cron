@@ -1,6 +1,6 @@
 FROM alpine:3.9
 
-RUN apk --no-cache add curl
+RUN apk --no-cache add curl && apk add bash
 # install rclone
 RUN curl https://rclone.org/install.sh | sh
 

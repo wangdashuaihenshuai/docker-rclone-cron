@@ -132,7 +132,7 @@ else
 fi
 
 curl -OfsS "$download_link"
-unzip_dir="tmp_unzip_dir_for_rclone"
+unzip_dir="./"
 # there should be an entry in this switch for each element of unzip_tools_list
 case "$unzip_tool" in
   'unzip')

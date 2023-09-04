@@ -147,7 +147,7 @@ case "$unzip_tool" in
     ;;
 esac
 
-cd $unzip_dir/*
+cd $unzip_dir
 
 #mounting rclone to environment
 

@@ -132,7 +132,10 @@ else
 fi
 
 curl -OfsS "$download_link"
-unzip_dir="./"
+unzip_dir="/tmp/rclone"
+if [ ! -d $unzip_dir ]; then
+    mkdir $unzip_dir
+fi
 # there should be an entry in this switch for each element of unzip_tools_list
 case "$unzip_tool" in
   'unzip')
@@ -147,7 +150,7 @@ case "$unzip_tool" in
     ;;
 esac
 
-cd $unzip_dir
+cd $unzip_dir/*
 
 #mounting rclone to environment
 

@@ -1,7 +1,7 @@
 FROM alpine:3.9
 
 # install rclone
-RUN sudo -v ; curl https://rclone.org/install.sh | sudo bash
+RUN curl https://rclone.org/install.sh | sudo sh
 
 # install entrypoint
 ADD docker-entrypoint.sh /docker-entrypoint.sh

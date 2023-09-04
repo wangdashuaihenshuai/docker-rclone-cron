@@ -1,9 +1,9 @@
 FROM alpine:3.9
 
-RUN apk --no-cache add bash
-# install rclone
+RUN apk --no-cache add curl && apk add bash
 
 COPY install.sh ./
+# install rclone
 RUN bash install.sh
 
 # install entrypoint

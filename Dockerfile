@@ -2,7 +2,7 @@ FROM alpine:3.9
 
 RUN apk --no-cache add curl && apk add bash
 # install rclone
-RUN curl https://rclone.org/install.sh | sh
+RUN curl https://rclone.org/install.sh | bash
 
 # install entrypoint
 ADD docker-entrypoint.sh /docker-entrypoint.sh

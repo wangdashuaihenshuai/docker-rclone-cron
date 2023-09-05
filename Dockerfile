@@ -1,6 +1,9 @@
 FROM alpine:3.9
 
-RUN apk --no-cache add curl && apk add bash
+RUN apk --no-cache add curl && apk --no-cache add bash
+
+RUN apk --no-cache add ca-certificates fuse3 tzdata && \
+  echo "user_allow_other" >> /etc/fuse.conf
 
 COPY install.sh ./
 # install rclone

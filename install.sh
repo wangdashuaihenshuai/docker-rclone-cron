@@ -136,6 +136,7 @@ unzip_dir="/tmp/rclone"
 if [ ! -d $unzip_dir ]; then
     mkdir $unzip_dir
 fi
+
 # there should be an entry in this switch for each element of unzip_tools_list
 case "$unzip_tool" in
   'unzip')
@@ -200,6 +201,7 @@ esac
 #update version variable post install
 version=$(rclone --version 2>>errors | head -n 1)
 
+rm -rf $unzip_dir
 printf "\n${version} has successfully installed."
 printf '\nNow run "rclone config" for setup. Check https://rclone.org/docs/ for more details.\n\n'
 exit 0
